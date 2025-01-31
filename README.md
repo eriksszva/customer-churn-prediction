@@ -7,7 +7,7 @@ Telekomunikasi adalah suatu industri yang mencakup semua perusahaan dan organisa
 
 Berdasarkan perhitungan nilai CR (*concentration ratio*), industri yang dilakukan pada empat perusahaan telekomunikasi terbesar di Indonesia dengan total keseluruhan 95,26%, tiap perusahaan memiliki pangsa pasar yang bervariasi. Pangsa pasar dalam tiap perusahaan mencerminkan dominasi oleh beberapa pemain utama, persaingan tajam dan kontrol harga yang signifikan, tetapi tetap saling bergantung satu sama lain. Dengan nilai CR4 yang berada di antara 60%-100% dapat mengakibatkan struktur pasar oligopoli yang ketat. Kondisi demikian menyebabkan setiap pengambilan keputusan dari suatu perusahaan dapat memberikan dampak bagi perusahaan lain dan setiap kebijakan harga yang dibuat harus diperhatikan. Contohnya, pada tahun 2017, terjadinya kerugian disebabkan oleh tarif murah yang mengerek jumlah pelanggan secara signifikan, tetapi peningkatan trafik yang melonjak drastis tidak sepadan dengan pendapatan yang diterima. 
 
-*Churn* adalah suatu kondisi dimana pelanggan tidak melanjutkan menggunakan layanan atau berhenti berlangganan yang disebabkan oleh beberapa hal. Sedangkan pelanggan jangka panjang penting untuk keberlangsungan perusahaan. Kemudian, *churn rate* adalah persentase pelanggan yang berhenti. Tingkat *churn* tinggi mengakibatkan penurunan pangsa pasar dan pendapatan perusahaan. Penyebab *customer churn* bisa disebabkan oleh beberapa faktor seperti pelayanan yang buruk, pindah lokasi, harga, situasi pesaing yang lebih menjanjikan, kecepatan internet, dan sebagainya. Dengan kondisi persaingan industri telekomunikasi yg sangat intens atau kompetitif maka akan meningkatkan persaingan industri di berbagai faktor yang ada demi menjaga retensi atau hubungan *customer* jangka panjang. Dengan demikian, diperlukannya suatu tolak ukur atau indikator untuk mengatur strategi perilaku, bisnis, dan pemasaran yang ada untuk mempertahankan pelanggan serta mengevaluasi situasi dan merancang paket layanan yang sesuai. Oleh karena itu, dibuatlah sebuah model *machine learning* untuk memprediksi apakah seseorang memiliki kecenderungan untuk *churn* atau tidak. Dengan adanya model *machine learning*, diharapkan perusahaan telekomunikasi dapat lebih waspada mengenai pelanggan-pelanggan yang berpotensi untuk *churn* untuk mempertahankan pelanggan yang sudah ada.
+*Churn* terjadi ketika pelanggan berhenti menggunakan layanan atau tidak memperpanjang langganannya, yang dapat disebabkan oleh berbagai faktor seperti kualitas layanan, harga, persaingan, atau perubahan kebutuhan. Pelanggan jangka panjang sangat berharga bagi keberlangsungan perusahaan, sehingga *churn rate*—persentase pelanggan yang berhenti—menjadi metrik penting dalam menilai stabilitas bisnis. Tingginya tingkat *churn* dapat menyebabkan penurunan pangsa pasar dan pendapatan, terutama dalam industri telekomunikasi yang sangat kompetitif. Oleh karena itu, perusahaan perlu mengidentifikasi penyebab utama dan memprediksi *churn* serta merancang strategi untuk meningkatkan retensi pelanggan. Salah satu solusi yang efektif adalah membangun model *machine learning* untuk memprediksi pelanggan yang berpotensi *churn*. Dengan model ini, perusahaan dapat mengambil langkah proaktif, seperti menawarkan insentif atau meningkatkan layanan, guna mempertahankan pelanggan dan meningkatkan loyalitas mereka.
 
 **Referensi:**
 * [Analisis Industri Telekomunikasi Seluler di Indonesia Pendekatan SCP Structure Conduct Performance](https://www.researchgate.net/publication/348609455_Analisis_Industri_Telekomunikasi_Seluler_di_Indonesia_Pendekatan_SCP_Structure_Conduct_Perfoemance)
@@ -18,19 +18,18 @@ Berdasarkan perhitungan nilai CR (*concentration ratio*), industri yang dilakuka
 Berdasarkan latar belakang, berikut ini adalah rumusan masalah yang dapat diselesaikan:
 
 **Problem Statements**:
-* Bagaimana proses analisis EDA dapat membantu dalam memahami distribusi masing-masing fitur, hubungan antar fitur, serta interaksi kompleks antara beberapa fitur untuk mengidentifikasi pola yang mungkin mempengaruhi prediksi churn pelanggan? 
+* Bagaimana proses analisis EDA dapat membantu dalam memahami distribusi masing-masing fitur, hubungan serta interaksi kompleks antara beberapa fitur untuk mengidentifikasi layanan yang mungkin mempengaruhi tingkat churn pelanggan? 
 * Bagaimana cara mengidentifikasi layanan-layanan yang paling berpengaruh terhadap kecenderungan pelanggan untuk churn, sehingga perusahaan dapat mengoptimalkan strategi retention?
 * Bagaimana memperoleh model machine learning yang sesuai dengan kebutuhan industri telekomunikasi dan dapat memberikan insight yang relevan bagi keputusan bisnis?
 
 **Goals**:
 * Mendapatkan wawasan yang lebih dalam tentang pola dan hubungan antar fitur dalam data.
 * Mengidentifikasi layanan-layanan yang paling berpengaruh terhadap kecenderungan churn pelanggan, dengan fokus pada perbaikan dan pengoptimalan layanan tersebut untuk meningkatkan kepuasan dan retensi pelanggan.
-* Mengembangkan model machine learning yang tepat guna untuk mengatasi masalah churn pelanggan di industri telekomunikasi, yang dapat memberikan prediksi yang akurat serta menyediakan wawasan yang dapat membantu perusahaan dalam merumuskan strategi bisnis yang lebih efektif.
+* Mengembangkan model machine learning yang tepat guna untuk mengatasi masalah churn pelanggan di industri telekomunikasi, yang dapat memberikan prediksi serta menyediakan wawasan yang dapat membantu perusahaan dalam merumuskan strategi bisnis yang lebih efektif.
 
 **Solution Statements**:
 * Untuk memahami distribusi dan hubungan antar fitur, dilakukan analisis univariate untuk mengevaluasi distribusi tiap fitur, bivariate untuk memahami hubungan antar dua fitur, dan multivariate untuk melihat interaksi yang lebih kompleks antar banyak fitur. 
-
-* Untuk mengidentifikasi layanan yang paling berpengaruh terhadap churn pelanggan, digunakan uji independensi chi-squared untuk data kategorik (misalnya, jenis layanan) dan uji ANOVA untuk data numerik (misalnya, total tagihan atau durasi berlangganan). Uji-uji ini memungkinkan identifikasi fitur-fitur yang memiliki hubungan signifikan dengan kecenderungan churn pelanggan, yang kemudian dapat digunakan untuk strategi retention.
+* Untuk mengidentifikasi layanan yang paling berpengaruh terhadap churn pelanggan, digunakan uji independensi chi-square untuk data kategorik (misalnya, jenis layanan) dan uji ANOVA untuk data numerik (misalnya, total tagihan atau durasi berlangganan). Uji-uji ini memungkinkan identifikasi fitur-fitur yang memiliki hubungan signifikan dengan kecenderungan churn pelanggan, yang kemudian dapat digunakan untuk strategi retention.
 * Penggunaan dua algoritma seperti XGBoost dan LightGBM untuk menemukan model yang sesuai dan mampu mengatasi masalah imbalanced classification binary serta memberikan performa yang baik dalam waktu yang relatif cepat.
      * Cara kerja XGBoost (Extreme Gradient Boosting):
           * Menggunakan teknik boosting, di mana model dibangun secara bertahap untuk memperbaiki kesalahan model sebelumnya.
@@ -44,7 +43,7 @@ Berdasarkan latar belakang, berikut ini adalah rumusan masalah yang dapat disele
 
 
 ### **Data Understanding:**
-Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi tipe data yang dominan berupa **18 kolom bertipe object**, **2 kolom bertipe int64**, dan **1 kolom bertipe float64**. Fitur numerik yang ada antara lain `SeniorCitizen`, `tenure`, dan `MonthlyCharges`, sementara fitur kategorikal mencakup `Partner`, `gender`, dan lainnya. Kolom `customerID` memiliki nilai unik terbanyak, sedangkan data lainnya memiliki antara 2 hingga 4 nilai unik. Kolom `TotalCharges` memiliki tipe data yang tidak sesuai dan perlu diubah tipe datanya agar dapat diproses lebih lanjut. Tidak ditemukan missing values atau data duplikat dalam dataset ini, tetapi terdapat ketidakseimbangan data pada kolom target (churn), dengan jumlah churn "No" sebanyak 5174 dan churn "Yes" sebanyak 1869.
+Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi tipe data yang dominan berupa **18 kolom bertipe object**, **2 kolom bertipe int64**, dan **1 kolom bertipe float64**. Fitur numerik yang ada antara lain `SeniorCitizen`, `tenure`, dan `MonthlyCharges`, sementara fitur kategorikal mencakup `Partner`, `gender`, dan lainnya. Kolom `customerID` memiliki nilai unik terbanyak, sedangkan data lainnya memiliki antara 2 hingga 4 nilai unik. Kolom `TotalCharges` memiliki tipe data yang tidak sesuai dan perlu diubah tipe datanya agar dapat diproses lebih lanjut. Tidak ditemukan missing values atau data duplikat dalam dataset ini, tetapi terdapat ketidakseimbangan data pada kolom target (churn), dengan jumlah churn `No` sebanyak `5174` dan churn `Yes` sebanyak `1869`.
 
 **Sumber Data:** [IBM Telco Churn Repository](https://github.com/IBM/telco-customer-churn-on-icp4d/tree/master/data)
 
@@ -82,18 +81,18 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
 #### **Tahapan Memahami Data:**
 
 
-* Melakukan univariate analysis data kategorik untuk mengevaluasi distribusi tiap fitur.
+* Melakukan univariate analysis pada data kategorik untuk mengevaluasi distribusi tiap fitur.
 
      ![univariate analysis](img/univariate_analysis.png)
-     Mayoritas pelanggan adalah non-lansia, tidak memiliki tanggungan, dan lebih memilih layanan telepon serta internet fiber optic, tetapi jarang berlangganan layanan tambahan. Dalam sistem pembayaran, pelanggan cenderung memilih kontrak bulanan, penagihan tanpa kertas, dan metode pembayaran electronic check, sementara tingkat churn didominasi oleh pelanggan yang tetap bertahan.
+     Mayoritas pelanggan adalah non-lansia, tidak memiliki tanggungan, dan lebih memilih layanan telepon serta internet fiber optic, tetapi jarang berlangganan layanan tambahan. Dalam sistem pembayaran, pelanggan cenderung memilih kontrak bulanan, penagihan tanpa kertas, dan metode pembayaran electronic check, sementara tingkat churn didominasi oleh pelanggan yang masih bertahan atau berlangganan.
 
-* Melakukan univariate analysis data numerik untuk mengetahui distribusi, skewness, dan outlier dalam data.
+* Melakukan univariate analysis pada data numerik untuk mengetahui distribusi, skewness, dan outlier dalam data.
 
      ![univariate analysis](img/univariate_numeric.png)
      ![univariate analysis](img/univariate_boxplot.png)
-     Data `totalcharges` memiliki rentang besar dengan distribusi right-skewed, menunjukkan mayoritas nilai berada di kisaran rendah dan hanya sedikit pelanggan dengan biaya tinggi. Distribusi `tenure` berbentuk U, `monthlycharges` bervariasi dengan konsentrasi sekitar $70-$90, dan tidak ada kolom yang berdistribusi normal, sehingga transformasi atau scaling mungkin diperlukan. Tidak ada outlier di semua data numerik sehingga tidak perlu menangani outlier.
+     Data `totalcharges` memiliki rentang yang cukup besar dengan distribusi right-skewed, menunjukkan mayoritas nilai berada di kisaran rendah dan hanya sedikit pelanggan dengan biaya tinggi. Distribusi `tenure` berbentuk U (U-shaped distribution), `monthlycharges` bervariasi dengan konsentrasi sekitar $70-$90, dan tidak ada kolom yang berdistribusi normal, sehingga transformasi atau scaling mungkin diperlukan. Tidak ada outlier di semua data numerik sehingga tidak perlu menangani outlier.
 
-* Melakukan bivariate analysis data kategorik dengan target untuk memahami hubungan antar dua fitur.
+* Melakukan bivariate analysis pada data kategorik dengan target untuk memahami hubungan antar dua variabel.
 
      ![bivariate analysis](img/bivariate_1.png)
      ![bivariate analysis](img/bivariate_2.png)
@@ -101,27 +100,41 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
      ![bivariate analysis](img/bivariate_4.png)
      Pelanggan dengan kontrak bulanan, penagihan tanpa kertas, dan metode pembayaran electronic check menunjukkan kecenderungan churn yang lebih tinggi, mengindikasikan potensi ketidakpuasan terhadap layanan pembayaran dan fleksibilitas kontrak. Selain itu, pelanggan yang tidak memiliki pasangan, tidak berlangganan layanan tambahan seperti online security atau tech support, serta pengguna fiber optic cenderung lebih sering churn, menunjukkan adanya faktor kepuasan yang perlu dievaluasi. Kesamaan pola churn antara pelanggan dengan satu atau beberapa saluran telepon, serta antara pengguna layanan streaming TV dan movies, mengindikasikan bahwa kualitas layanan bisa menjadi faktor utama dalam keputusan churn.
 
-* Melakukan bivariate analysis data numerik dengan target untuk memahami hubungan antar dua fitur.
+* Melakukan bivariate analysis pada data numerik dengan target untuk memahami hubungan antar dua fitur.
 
      ![bivariate analysis](img/bivariate_numeric.png)
-     Pelanggan yang churn cenderung memiliki masa berlangganan lebih pendek (rata-rata 9 bulan) dan tagihan bulanan lebih tinggi ($80) dibandingkan pelanggan yang tidak churn, yang memiliki rata-rata masa berlangganan 37 bulan dan tagihan $63. Selain itu, total tagihan pelanggan yang churn lebih rendah ($600) dibandingkan yang tidak churn ($1700), menunjukkan bahwa pelanggan churn umumnya meninggalkan layanan lebih awal sebelum akumulasi tagihan menjadi besar.
+     Pelanggan yang churn cenderung memiliki masa berlangganan lebih pendek (rata-rata 9 bulan) dan tagihan bulanan lebih tinggi ($80) dibandingkan pelanggan yang tidak churn, yaitu memiliki rata-rata masa berlangganan 37 bulan dan tagihan $63. Selain itu, total tagihan pelanggan yang churn lebih rendah (sekitar $600) dibandingkan yang tidak churn ($1700), menunjukkan bahwa pelanggan churn umumnya meninggalkan layanan lebih awal sebelum akumulasi tagihan menjadi besar.
 
 * Melakukan multivariate analysis untuk melihat interaksi yang lebih kompleks antar banyak fitur:
      ![multivariate analysis](img/heatmap.png)
      ![multivariate analysis](img/pair_plot_multivariate.png)
 
-     Heatmap menunjukkan adanya korelasi antar beberapa fitur. Dari pair plot terlihat peningkatan masa berlangganan atau tagihan bulanan cenderung meningkatkan total tagihan. Pola segitiga yang terlihat di scatter plot kemungkinan disebabkan oleh distribusi data yang tidak normal dan tingkat variasi data yang tinggi, yang menyebabkan penyebaran data tidak merata.
+     Heatmap menunjukkan adanya korelasi antar beberapa fitur. Dimana semakin lama pelanggan berlangganan, semakin rendah kecenderungannya untuk churn, ini menggambarkan hubungan negatif yang kuat antara durasi berlangganan dan churn. Di sisi lain, durasi berlangganan yang lebih lama juga terkait dengan nilai kontrak atau lamanya waktu kontrak yang lebih tinggi, menunjukkan hubungan positif antara keduanya. Selain itu, pelanggan yang memilih layanan tambahan atau add-on juga cenderung memiliki durasi berlangganan yang lebih lama, mengindikasikan bahwa keputusan untuk menambah layanan akan mempengaruhi hubungan jangka panjang dengan perusahaan.
+     
+     Dari pair plot terlihat peningkatan masa berlangganan atau tagihan bulanan cenderung meningkatkan total tagihan. Pola segitiga yang terlihat di scatter plot kemungkinan disebabkan oleh distribusi data yang tidak normal dan tingkat variasi data yang tinggi, yang menyebabkan penyebaran data tidak merata.
 
 ### **Data Preparation:**
 * **Feature Selection**
      ```python
+     from sklearn.feature_selection import SelectKBest, chi2, f_classif
+
      # uji independensi chi2
      bestfeatures = SelectKBest(score_func=chi2, k=10)
 
      # uji ANOVA F-value
      bestfeatures = SelectKBest(score_func=f_classif, k=3)
      ```
-     Feature selection dilakukan untuk memilih fitur yang paling relevan dan dilakukan menggunakan class `SelectKBest`. Uji chi-square digunakan untuk mengukur hubungan antara fitur kategorikal dengan target dimana sebelumnya data-data kategorik telah diubah menjadi label dengan label encoding, sementara ANOVA F-value digunakan untuk menilai kontribusi fitur numerik terhadap target. Dari hasil uji chi-square, dipilih 10 fitur yang memiliki hubungan kuat dengan churn, sedangkan fitur numerik seperti `tenure` terbukti memiliki korelasi yang signifikan berdasarkan ANOVA. Tahapan ini diperlukan agar model dapat bekerja lebih optimal dengan hanya menggunakan fitur yang paling berpengaruh, mengurangi dimensi data, dan meningkatkan efisiensi pemrosesan.
+     **Hasil uji independesi chi2:**
+
+     ![chi2 result](img/chi2_result.png)
+
+     **Hasil uji ANOVA F-value:**
+
+     ![anova](img/anova_result.png)
+
+     Feature selection dilakukan untuk memilih fitur yang paling relevan dan dilakukan menggunakan class `SelectKBest` dari scikit-learn. Uji chi-square digunakan untuk mengukur hubungan antara fitur kategorikal dengan target dimana sebelumnya data-data kategorik telah diubah menjadi label dengan label encoding, sementara ANOVA F-value digunakan untuk menilai kontribusi fitur numerik terhadap target.
+     
+     Dari hasil uji chi-square, dipilih 10 fitur yang memiliki hubungan kuat dengan churn, sedangkan fitur numerik seperti `tenure` terbukti memiliki korelasi yang signifikan berdasarkan ANOVA. Tahapan ini diperlukan agar model dapat bekerja lebih optimal dengan hanya menggunakan fitur yang paling berpengaruh, mengurangi dimensi data, dan meningkatkan efisiensi pemrosesan.
      
 * **Categorical Encoding**
      ```python
@@ -132,7 +145,7 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
           le = LabelEncoder()
           df_categoric[col] = le.fit_transform(df_categoric[col])
      ```
-     Prosesnya adalah memilih kolom-kolom yang memiliki data kategorik. Lalu dilakukanlah label encoding, label encoding dipilih daripada one-hot encoding karena jumlah kategori terbanyak adalah empat. Sehingga dapat menghindari peningkatan dimensi yang berlebihan. Selain itu, label encoding lebih efisien dalam komputasi dan memori, serta tidak memengaruhi performa model karena algoritma yang digunakan tidak sensitif terhadap skala atau urutan numerik.
+     Prosesnya adalah memilih kolom-kolom yang memiliki data kategorik. Lalu dilakukanlah label encoding, label encoding dipilih daripada one-hot encoding karena dataset memiliki banyak fitur dan jumlah kategori terbanyak adalah empat. Sehingga dapat menghindari peningkatan dimensi yang berlebihan. Selain itu, label encoding lebih efisien dalam komputasi dan memori, serta tidak memengaruhi performa model karena algoritma yang digunakan tidak sensitif terhadap skala atau urutan numerik.
 
 * **Merge data and Drop Unselected Features**
      ```python
@@ -140,18 +153,28 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
      df = pd.concat([df_categoric, df_numeric], axis=1)
      df.drop(columns = columns_to_drop, axis=1, inplace=True)
      ```
-     Data kategorik yang telah diencoding menggunakan label encoding digabungkan dengan data numerik ke dalam satu dataframe. Setelah penggabungan, hanya fitur-fitur yang telah dipilih melalui uji chi-square dan ANOVA yang dipertahankan, sementara fitur yang tidak relevan dihapus. Langkah ini bertujuan untuk memastikan bahwa hanya fitur yang memiliki hubungan kuat dengan target yang digunakan dalam proses modeling. Dengan mengurangi fitur yang tidak diperlukan, kompleksitas model dapat dikurangi sehingga meningkatkan efisiensi komputasi. Selain itu, eliminasi fitur yang tidak relevan membantu menghindari overfitting dan meningkatkan generalisasi model terhadap data baru.
+     **Fitur terpilih terdapat 13 kolom dari yang awalnya 20 kolom**
+     
+     ![selected features](img/selected_features.png)
+
+     Data kategorik yang telah di-encoding menggunakan label encoding digabungkan dengan data numerik ke dalam satu dataframe. Setelah penggabungan, hanya fitur-fitur yang telah dipilih melalui uji chi-square dan ANOVA yang dipertahankan, sementara fitur yang tidak relevan dihapus. Langkah ini bertujuan untuk memastikan bahwa hanya fitur yang memiliki hubungan kuat dengan target yang digunakan dalam proses modeling. Dengan mengurangi fitur yang tidak diperlukan, kompleksitas model dapat dikurangi sehingga meningkatkan efisiensi komputasi. Selain itu, eliminasi fitur yang tidak relevan membantu menghindari overfitting dan meningkatkan generalisasi model terhadap data baru.
 
 * **Train Test Split Data**
      ```python
      # splitting training dan testing data
      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
      ```
+     **Hasilnya:**
+
+     ![splitting result](img/splitting_result.png)
+
+     Setelah memisahkan features (X) dan target (y) dalam dataset. Dataset dibagi menjadi data training (80%) dan data testing (20%) menggunakan *train_test_split*. Data training digunakan untuk melatih model dengan sebanyak mungkin informasi dari dataset, sementara data testing digunakan untuk mengevaluasi performa model pada data yang belum pernah dilihat sebelumnya. Random state diterapkan agar pembagian dataset tetap konsisten setiap kali proses dilakukan ulang.
+
      ![train test split](img/train_test_split.png)
      
      (Menunjukkan `train_test_split` secara default men-shuffle dataset)
-
-     Setelah memisahkan features (X) dengan target (y). Dataset dibagi menjadi data training (80%) dan data testing (20%) menggunakan *train_test_split*. Data training digunakan untuk melatih model dengan sebanyak mungkin informasi dari dataset, sementara data testing digunakan untuk mengevaluasi performa model pada data yang belum pernah dilihat sebelumnya. Random state diterapkan agar pembagian dataset tetap konsisten setiap kali proses dilakukan ulang. Selain itu, secara default dengan *train_test_split* dataset di-*shuffle* sebelum dibagi untuk memastikan bahwa data training dan testing dipilih secara acak, menghindari model menghafal urutan data yang dapat menyebabkan bias dalam prediksi. Proses train test split digunakan untuk mengevaluasi performa model pada data yang belum pernah dilihat sebelumnya, memastikan generalisasi model.
+     
+     Selain itu, secara default dengan *train_test_split* dataset di-*shuffle* sebelum dibagi untuk memastikan bahwa data training dan testing dipilih secara acak, menghindari model menghafal urutan data yang dapat menyebabkan bias dalam prediksi. Proses train test split digunakan untuk mengevaluasi performa model pada data yang belum pernah dilihat sebelumnya, memastikan generalisasi model.
 
 * **Data Balancing**
 
@@ -160,6 +183,14 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
      from imblearn.over_sampling import SMOTE
      smote = SMOTE(random_state=42)
      ```
+     **Sebelum melakukan data balancing:**
+
+     ![imbalance data](img/imbalance_data.png)
+
+     **Setelah melakukan data balancing:**
+
+     ![balanced data](img/balanced_data.png)
+     
      Dalam hal ini, SMOTE diterapkan setelah *train-test split*, hanya pada training set, untuk menghasilkan data sintetis dari kelas yang lebih sedikit (dalam kasus ini, pelanggan yang churn) sehingga distribusi kelas menjadi lebih seimbang. Teknik ini berguna karena dataset yang relatif kecil dapat menyebabkan model kekurangan informasi untuk mengenali pola dari kelas minoritas. Dengan menambahkan data sintetis, model memiliki kesempatan lebih besar untuk mempelajari karakteristik dari kedua kelas secara seimbang, sementara testing set tetap dipertahankan dalam distribusi aslinya untuk mengevaluasi performa model secara objektif.
 
 ### **Modeling:**
@@ -190,7 +221,7 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
      skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
      cv_score = cross_val_score(model, X_train_resampled, y_train_resampled, cv=skf, scoring='roc_auc')
      ```
-     Dilakukan cross-validation menggunakan **StratifiedKFold** dengan 5 fold (`n_splits=5`), di mana data akan dibagi secara stratifikasi untuk memastikan proporsi kelas tetap sama di setiap fold. Parameter `shuffle=True` memastikan data diacak sebelum dibagi, dan `random_state=42` digunakan untuk memastikan hasil yang konsisten setiap kali proses dijalankan. Dalam perhitungan skor CV, digunakan **scoring='roc_auc'** untuk mengevaluasi performa model pada dataset yang tidak seimbang, karena ROC AUC lebih baik dalam mengukur kemampuan model membedakan kelas positif dan negatif tanpa bergantung pada threshold, yang lebih relevan daripada metrik lain seperti akurasi pada data imbalance.
+     Dilakukan cross-validation menggunakan **StratifiedKFold** dengan 5 fold (`n_splits=5`), di mana data akan dibagi secara stratifikasi untuk memastikan proporsi kelas tetap sama di setiap fold. Parameter `shuffle=True` memastikan data diacak sebelum dibagi, dan `random_state=42` digunakan untuk memastikan hasil yang konsisten setiap kali proses dijalankan. Dalam perhitungan skor CV, digunakan `scoring='roc_auc'` untuk mengevaluasi performa model pada dataset yang tidak seimbang, karena ROC AUC lebih baik dalam mengukur kemampuan model membedakan kelas positif dan negatif tanpa bergantung pada threshold, yang lebih relevan daripada metrik lain seperti akurasi pada data imbalance.
      
      ---
      ![Cross Validation Models](img/cv_model.png)
@@ -204,10 +235,9 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
      --
      ![confusion matrix](img/confusion_matrix.png)
 
-
-* **Model Terbaik**
-
-     Dari cross validation yang telah dilakukan `LGBMClassifier` memiliki mean score yang sedikit lebih tinggi, yaitu `91.98%`, dibandingkan dengan `XGBClassifier` yang mencapai `91.92%`. Meskipun selisihnya hanya `0.06%`, perbedaan ini cukup signifikan karena dievaluasi menggunakan 5 fold cross validation. Sedangkan dalam confusion matrix, LGBMClassifier lebih unggul dalam memprediksi churn (kelompok 1), dengan 226 pelanggan churn yang diprediksi dengan benar, dibandingkan 214 pada model XGBoost. Kemudian ROC AUC score dari model ini juga lebih baik. Karena performanya lebih baik dalam mendeteksi pelanggan churn, serta selinier dengan tujuan utama, yaitu mengidentifikasi untuk mempertahankan pelanggan yang memiliki risiko tinggi untuk churn maka model terbaik adalah `LGBMClassifier`.
+     Dari cross validation yang telah dilakukan, `LGBMClassifier` memiliki mean score yang sedikit lebih tinggi, yaitu `91.98%`, dibandingkan dengan `XGBClassifier` yang hanya mencapai `91.92%`. Meskipun selisihnya hanya `0.06%`, perbedaan ini cukup berarti karena dievaluasi menggunakan 5 fold cross validation. Sedangkan dalam confusion matrix, LGBMClassifier lebih unggul dalam memprediksi churn (kelas 1), dengan 226 pelanggan churn yang diprediksi dengan benar dan hanya 148 yang tidak terdeteksi (benar-benar churn tetapi diklasifikasikan sebagai tidak churn). Sebagai perbandingan, model XGBoost hanya berhasil mengidentifikasi 214 pelanggan churn dengan benar, sementara 160 pelanggan churn tidak terdeteksi. 
+     
+     Kemudian ROC AUC score dari model LGBMClassifier juga lebih baik, yaitu `81.89%`. Karena performanya lebih baik dalam mendeteksi pelanggan churn, serta selinier dengan tujuan utama, yaitu mengidentifikasi untuk mempertahankan pelanggan yang memiliki risiko tinggi untuk churn maka model terbaik adalah `LGBMClassifier`.
 
 * **Model Terpilih**
      ```python
@@ -241,9 +271,9 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
 
 
 ### **Model Evaluation:**
-#### **Comparison Model**
+#### **Comparison Model Section:**
 
-* Menggunakan classification report
+* Menggunakan classification report:
 
      **XGBClassifier**
      ![xgboost](img/xgboost_classification_report.png)
@@ -274,28 +304,28 @@ Dataset yang digunakan berisi **7043** baris dan **21** kolom, dengan komposisi 
 
               F1-score adalah rata-rata harmonis antara precision dan recall, yang memberikan keseimbangan antara keduanya, dihitung dengan rumus 2 * (precision * recall) / (precision + recall).
 
-* Roc AUC Score
+* ROC AUC Score:
 
      ![roc auc xgboost](img/roc_auc_xgboost.png)
      ![roc auc lgbm](img/roc_auc_lgbm.png)
-     * Meskipun ROC AUC score dari LGBMClassifier (81.89%) sedikit lebih tinggi dibandingkan XGBClassifier (80.85%), perbedaan ini sangat kecil, menunjukkan bahwa keduanya memiliki performa yang hampir sama. 
+     * Meskipun ROC AUC score dari LGBMClassifier (81.89%) sedikit lebih tinggi dibandingkan XGBClassifier (80.85%), perbedaan ini menunjukkan bahwa keduanya memiliki performa yang hampir sama. 
      * penjelasan:
 
           ![auc formula](img/auc_formula.png)
-          * ROC (Receiver Operating Characteristic) adalah kurva yang menggambarkan kinerja model klasifikasi pada berbagai threshold, yang menunjukkan trade-off antara True Positive Rate (TPR) dan False Positive Rate (FPR). Kurva ROC dihasilkan dengan menggambar FPR pada sumbu x dan TPR pada sumbu y untuk berbagai nilai threshold. 
+          * ROC (Receiver Operating Characteristic) adalah kurva yang menggambarkan kinerja model klasifikasi pada berbagai threshold, yang menunjukkan trade-off antara true positive rate (TPR) dan false positive rate (FPR). Kurva ROC dihasilkan dengan menggambar FPR pada sumbu x dan TPR pada sumbu y untuk berbagai nilai threshold. 
           * AUC menghitung area di bawah kurva ROC yang menggambarkan trade-off antara TPR dan FPR pada berbagai threshold. AUC yang lebih tinggi menunjukkan model yang lebih baik dalam membedakan antara kelas positif dan negatif.
 
-* Graph ROC AUC
+* Graph ROC AUC:
 
      ![roc auc graph](img/roc_auc_2.png)
      * Di bagian awal kurva (false positive rate rendah), kedua model memiliki kemiringan yang mirip, tetapi seiring meningkatnya rate kurva, LGBMClassifier sedikit lebih tinggi daripada XGBClassifier dalam sebagian besar titik, itu berarti LGBMClassifier lebih efektif dalam menangkap pelanggan churn.
      * LGBMClassifier memiliki area yang sedikit lebih besar di bawah kurva (AUC) dibandingkan XGBClassifier. Ini mengindikasikan bahwa secara keseluruhan, LGBMClassifier memiliki kecenderungan yang lebih kuat untuk memberi skor lebih tinggi pada pelanggan yang churn, menunjukkan bahwa model ini lebih mampu membedakan antara pelanggan yang churn dan tidak churn.
      
-#### **LightGBM Model**
+#### **LightGBM Model Section**
 
-* menggunakan classification report dan roc auc score
+* menggunakan classification report dan roc auc score:
 
 ![lgbm](img/lgbm_metrics.png)
 
-* Model yang telah melalui hyperparameter tuning memiliki ROC AUC score yang sedikit lebih tinggi `82,25%` dibandingkan sebelumnya, `81,89%`. Selain itu, recall untuk model kedua lebih baik (0,71 dibandingkan dengan 0,60), yang berarti model ini lebih efektif dalam menangkap pelanggan yang berpotensi churn. Dalam konteks bisnis, sangat penting untuk mengidentifikasi pelanggan yang mungkin akan berhenti menggunakan layanan, sehingga perusahaan dapat mengambil tindakan pencegahan yang lebih cepat.
-* Dengan demikian, lebih banyak pelanggan yang berpotensi churn dapat terdeteksi sehingga memberikan peluang lebih banyak bagi tim retensi untuk mengintervensi dan menyelamatkan pelanggan yang hampir meninggalkan layanan, sehingga kepuasan dan loyalitas pelanggan dapat ditingkatkan.
+* Model yang telah melalui hyperparameter tuning memiliki ROC AUC score yang sedikit lebih tinggi `82,25%` dibandingkan sebelumnya, `81,89%`. Selain itu, recall untuk model kedua lebih baik (0,71 dibandingkan dengan 0,60), yang berarti model ini lebih efektif dalam menangkap pelanggan yang berpotensi churn. Dalam konteks bisnis, sangat penting untuk mengidentifikasi pelanggan yang mungkin akan berhenti menggunakan layanan, sehingga perusahaan dapat mengambil tindakan pencegahan yang lebih cepat dan mempertahankan pelanggan yang ada.
+* Dengan demikian, pelanggan yang berpotensi churn dapat terdeteksi sehingga memberikan peluang lebih banyak bagi tim retensi untuk mengintervensi dan menyelamatkan pelanggan yang hampir meninggalkan layanan, sehingga kepuasan dan loyalitas pelanggan dapat ditingkatkan.
