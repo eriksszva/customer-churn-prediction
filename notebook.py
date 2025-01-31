@@ -9,6 +9,8 @@ Original file is located at
 # **Import Libraries**
 """
 
+!pip install scikit-learn==1.3.2
+
 # Commented out IPython magic to ensure Python compatibility.
 import pandas as pd
 import seaborn as sns
